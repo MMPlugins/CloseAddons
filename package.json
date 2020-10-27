@@ -1,6 +1,6 @@
 {
-  "name": "modmailhelp",
+  "name": "modmailmsgclose",
   "version": "1.0.0",
-  "description": "A help command for Dragory's modmail.",
+  "description": "A plugin to close threads with a message for Dragory's modmail.",
   "main": "./index.js"
 }
