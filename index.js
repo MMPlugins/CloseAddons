@@ -6,7 +6,7 @@ module.exports = ({ bot, utils, commands }) => {
       }
   
       const threadchannel = await thread.getDMChannel();
-      bot.createMessage(threadchannel.id, "**" + args.text + "**", msg.attachments, false);
+      bot.createMessage(threadchannel.id, `**${args.text}**`, msg.attachments, false);
       msg.delete();
       thread.close();
     });
