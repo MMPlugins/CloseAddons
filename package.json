@@ -2,5 +2,5 @@
   "name": "modmailhelp",
   "version": "1.0.0",
   "description": "A help command for Dragory's modmail.",
-  "main": "./index.js",
+  "main": "./index.js"
 }
