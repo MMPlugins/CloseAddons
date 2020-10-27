@@ -1,6 +1,13 @@
-module.exports = function({bot, commands}){
-  commands.addGlobalCommand ('help', '', (msg, args) => {
-  bot.createMessage (msg.channel.id, `**See the bot's commands at:**
-https://github.com/Dragory/modmailbot/blob/master/docs/commands.md`);
-  });
-}
+module.exports = ({ bot, utils, commands }) => {
+    commands.addInboxThreadCommand('messageclose', '[text$]',  async (msg, args, thread) => {
+      if (! args.text && msg.attachments.length  === 0) {
+        utils.postError(msg.channel, 'Text or Attachment is required');
+        return;
+      }
+  
+      const threadchannel = await thread.getDMChannel();
+      bot.createMessage(threadchannel.id, "**" + args.text + "**", msg.attachments, false);
+      msg.delete();
+      thread.close();
+    });
+  };
