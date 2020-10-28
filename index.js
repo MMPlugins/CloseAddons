@@ -1,4 +1,4 @@
-module.exports = ({ bot, utils, commands }) => {
+module.exports = function({ bot, utils, commands }) {
     commands.addInboxThreadCommand('messageclose', '[text$]',  async (msg, args, thread) => {
       if (! args.text && msg.attachments.length  === 0) {
         utils.postError(msg.channel, 'Text or Attachment is required');
