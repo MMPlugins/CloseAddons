@@ -12,7 +12,7 @@ module.exports = function({ bot, utils, commands }) {
     });
     commands.addInboxThreadCommand('reasonclose', '[text$]',  async (msg, args, thread) => {
       if (! args.text && msg.attachments.length  === 0) {
-        utils.postError(msg.channel.id, 'Text or Attachment is required');
+        utils.postError(msg.channel, 'Text or Attachment is required');
         return;
       }
   
