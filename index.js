@@ -4,7 +4,8 @@ module.exports = function({ bot, commands }) {
         msg.channel.createMessage('Text or Attachment is required');
         return;
       }
-  
+      
+      
       const threadchannel = await thread.getDMChannel();
       bot.createMessage(threadchannel.id, `${args.text}`, msg.attachments, false);
       msg.delete();
@@ -17,7 +18,7 @@ module.exports = function({ bot, commands }) {
       }
   
       const threadchanneltwo = await thread.getDMChannel();
-      bot.createMessage(threadchanneltwo.id, `Reason for thread closure: ${args.text}`, msg.attachments, false);
+      bot.createMessage(threadchanneltwo.id, `Thread closed. Reason: ${args.text}`, msg.attachments, false);
       msg.delete();
       thread.close();
     });
