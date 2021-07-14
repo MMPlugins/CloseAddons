@@ -13,3 +13,6 @@ Use:
 (by default, your prefix is !)
 [prefix]messageclose <content> in a thread to close with just a message  
 [prefix]reasonclose <content> in a thread to close with a reason.  
+
+# To get features earlier with the potential they could be unstable use the dev branch. #
+Dev Branch for the CloseAddons plugin for [Dragory's ModMail](https://github.com/dragory/modmailbot)
