@@ -1,4 +1,4 @@
-# Development branch for the CloseAddons plugin for [Dragory's ModMail](https://github.com/dragory/modmailbot)
+# Dev branch for the CloseAddons plugin for [Dragory's ModMail](https://github.com/dragory/modmailbot)
 
 ### Setup: ###
 Make sure your running at least v3.0.3 of Modmail.
